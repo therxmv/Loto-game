@@ -15,7 +15,6 @@ public class Main {
 class Loto {
     Scanner sc = new Scanner(System.in);
 
-
     private ArrayList<Integer> numbers = new ArrayList<>(100);
 
     // Билеты для участвия
@@ -90,24 +89,24 @@ class Loto {
 
         for(Integer o : numbers){
             if (firstTicket.contains(o)){
-                result1.add(o);
                 System.out.print("(" + o + "), ");
+                result1.add(o);
                 if (result1.size() == 10){
                     System.out.println("\nTicket #1 win!\n");
                     major();
                 }
             }
             else if (secondTicket.contains(o)){
-                result2.add(o);
                 System.out.print("[" + o + "], ");
+                result2.add(o);
                 if (result2.size() == 10){
                     System.out.println("\nTicket #2 win!\n");
                     major();
                 }
             }
             else if (thirdTicket.contains(o)){
-                result3.add(o);
                 System.out.print("{" + o + "}, ");
+                result3.add(o);
                 if (result3.size() == 10){
                     System.out.println("\nTicket #3 win!\n");
                     major();
