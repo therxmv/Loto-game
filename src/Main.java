@@ -6,8 +6,21 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-    Loto loto = new Loto();
-    loto.major();
+        System.out.println("""
+                ********************************************
+                *                Loto game                 *
+                *                                          *
+                * Choose between three randomly generated  *
+                * tickets.                                 *
+                *                                          *
+                * Numbers in () for first ticket, in [] -  *
+                * second and {} - third.                   *
+                *                                          *
+                ********************************************
+                """);
+
+        Loto loto = new Loto();
+        loto.major();
 
     }
 }
@@ -15,7 +28,7 @@ public class Main {
 class Loto {
     Scanner sc = new Scanner(System.in);
 
-    private ArrayList<Integer> numbers = new ArrayList<>(100);
+    private ArrayList<Integer> numbers = new ArrayList<>(90);
 
     // Билеты для участвия
     private ArrayList<Integer> firstTicket = new ArrayList<>(10);
@@ -84,7 +97,7 @@ class Loto {
     // Вывод чисел и сравнения
     public void getNumbers() throws InterruptedException {
         Collections.shuffle(numbers);
-        System.out.println("\nThe drum is spinning... (numbers in () for first ticket, in [] - second and {} - third)");
+        System.out.println("\nThe drum is spinning...");
         TimeUnit.SECONDS.sleep(1);
 
         for(Integer o : numbers){
