@@ -105,7 +105,7 @@ class Loto {
                 System.out.print("(" + o + "), ");
                 result1.add(o);
                 if (result1.size() == 10){
-                    System.out.println("\nTicket #1 win!\n");
+                    System.out.println("\nTicket №1 win!\n");
                     major();
                 }
             }
@@ -113,7 +113,7 @@ class Loto {
                 System.out.print("[" + o + "], ");
                 result2.add(o);
                 if (result2.size() == 10){
-                    System.out.println("\nTicket #2 win!\n");
+                    System.out.println("\nTicket №2 win!\n");
                     major();
                 }
             }
@@ -121,7 +121,7 @@ class Loto {
                 System.out.print("{" + o + "}, ");
                 result3.add(o);
                 if (result3.size() == 10){
-                    System.out.println("\nTicket #3 win!\n");
+                    System.out.println("\nTicket №3 win!\n");
                     major();
                 }
             }
