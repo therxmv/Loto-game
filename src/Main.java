@@ -15,24 +15,28 @@ public class Main {
 class Loto {
     Scanner sc = new Scanner(System.in);
 
+
     private ArrayList<Integer> numbers = new ArrayList<>(100);
 
+    // Билеты для участвия
     private ArrayList<Integer> firstTicket = new ArrayList<>(10);
     private ArrayList<Integer> secondTicket = new ArrayList<>(10);
     private ArrayList<Integer> thirdTicket = new ArrayList<>(10);
 
+    // Массивы для определения победителя
     private ArrayList<Integer> result1 = new ArrayList<>(10);
     private ArrayList<Integer> result2 = new ArrayList<>(10);
     private ArrayList<Integer> result3 = new ArrayList<>(10);
 
     public void major() throws InterruptedException {
-        System.out.print("Do you want to start? >> ");
+        System.out.print("Do you want to start?(yes/no) >> ");
         String start = sc.next();
         System.out.println();
 
         if ("Yes".equalsIgnoreCase(start)){
             addNumbers();
 
+            // Выбор билета
             System.out.print("Choose ticket(1-3) >> ");
             int choice = sc.nextInt();
             if(choice == 1){
@@ -52,6 +56,7 @@ class Loto {
         }
     }
 
+    // Добавления чисел в массивы
     public void addNumbers(){
         for (int i = 1; i <= 90; i++){
             numbers.add(i);
@@ -59,6 +64,7 @@ class Loto {
 
         Collections.shuffle(numbers);
 
+        // Сортировка чисел по билетам
         for (int j = 0; j <= 10; j++) {
             if (!firstTicket.contains(numbers.get(j))){
                 firstTicket.add(numbers.get(j));
@@ -76,9 +82,10 @@ class Loto {
         }
     }
 
+    // Вывод чисел и сравнения
     public void getNumbers() throws InterruptedException {
         Collections.shuffle(numbers);
-        System.out.println("\nThe drum is spinning (numbers in () for first ticket, in [] - second and {} - third)");
+        System.out.println("\nThe drum is spinning... (numbers in () for first ticket, in [] - second and {} - third)");
         TimeUnit.SECONDS.sleep(1);
 
         for(Integer o : numbers){
@@ -109,9 +116,9 @@ class Loto {
             else {
                 System.out.print(o + ", ");
             }
-
+            // Время остановки после каждой цифры
             TimeUnit.MILLISECONDS.sleep(600);
         }
-    }
 
+    }
 }
