@@ -13,8 +13,8 @@ public class Main {
                 * Choose between three randomly generated  *
                 * tickets.                                 *
                 *                                          *
-                * Numbers in () for first ticket, in [] -  *
-                * second and {} - third.                   *
+                * Numbers in () from first ticket, in [] - *
+                * from second and {} - third.              *
                 *                                          *
                 ********************************************
                 """);
