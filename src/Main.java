@@ -69,7 +69,7 @@ class Loto {
     }
 
     // Добавления чисел в массивы
-    public void addNumbers(){
+    private void addNumbers(){
         for (int i = 1; i <= 90; i++){
             numbers.add(i);
         }
@@ -95,7 +95,7 @@ class Loto {
     }
 
     // Вывод чисел и сравнения
-    public void getNumbers() throws InterruptedException {
+    private void getNumbers() throws InterruptedException {
         Collections.shuffle(numbers);
         System.out.println("\nThe drum is spinning...");
         TimeUnit.SECONDS.sleep(1);
